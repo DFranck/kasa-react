@@ -1,5 +1,5 @@
 import "./index.scss";
-import logo from "../../assets/images/desktop-footer-logo.svg";
+import logo from "../..//assets/images/desktop-footer-logo.svg";
 function Footer() {
   return (
     <footer className="footer-styles">

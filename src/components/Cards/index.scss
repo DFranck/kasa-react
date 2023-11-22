@@ -1,0 +1,63 @@
+@use '../../styles/variables' as var;
+
+.cards-container {
+    background: var.$Lightgrey;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    justify-content: center;
+    gap: 50px;
+    margin: 43px 0 43px;
+    padding: 50px;
+
+    @media screen and (max-width:1440px) {
+        background: none;
+        margin: 20px 0;
+        padding: 0;
+        gap: 20px;
+        grid-template-columns: 335px;
+    }
+
+    .card {
+        width: 340px;
+        height: 340px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 50%);
+        position: relative;
+
+        @media screen and (max-width:1440px) {
+            width: 335px;
+            height: 225px;
+        }
+
+        img {
+            width: 340px;
+            height: 340px;
+            border-radius: 10px;
+            opacity: 80%;
+            object-fit: cover;
+
+            @media screen and (max-width:1440px) {
+                width: 335px;
+                height: 225px;
+            }
+        }
+
+        .card-title {
+            position: absolute;
+            font-weight: 500;
+            left: 20px;
+            top: 268px;
+            font-size: 18px;
+            padding-right: 20px;
+            color: var.$White;
+
+            @media screen and (max-width:1440px) {
+                font-size: 18px;
+                top: 170px;
+                width: 295px;
+                padding: 0;
+            }
+        }
+    }
+}

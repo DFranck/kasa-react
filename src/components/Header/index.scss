@@ -8,14 +8,31 @@
     height: 68px;
     margin: 45px auto;
 
+    @media screen and (max-width:1440px) {
+        width: 335px;
+        margin: 10px auto;
+
+        img {
+            width: 145px;
+        }
+    }
+
     ul {
         display: flex;
         gap: 57px;
+
+        @media screen and (max-width:1440px) {
+            gap: 26px;
+        }
 
         a {
             color: var.$MainColor;
             font-weight: 500;
             font-size: 24px;
+
+            @media screen and (max-width:1440px) {
+                font-size: 12px;
+            }
         }
     }
 }

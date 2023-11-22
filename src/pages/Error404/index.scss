@@ -1,0 +1,25 @@
+@use '../../styles/variables' as var;
+
+.error-404 {
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+    justify-content: center;
+    align-items: center;
+    margin: 120px 0;
+
+    p {
+        font-size: 36px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    a,
+    p {
+        color: var.$MainColor;
+        font-weight: 500;
+
+    }
+}
