@@ -22,7 +22,7 @@ function Home() {
   return (
     <div className="home-container">
       <div className="home-title-container">
-        <img src={titlePicture} alt="" />
+        <img src={titlePicture} alt="title background pictur" />
         <h1>Chez vous, partout et ailleurs</h1>
       </div>
       <Cards data={data} />

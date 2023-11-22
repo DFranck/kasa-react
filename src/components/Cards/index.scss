@@ -10,7 +10,7 @@
     margin: 43px 0 43px;
     padding: 50px;
 
-    @media screen and (max-width:1440px) {
+    @media screen and (max-width:767px) {
         background: none;
         margin: 20px 0;
         padding: 0;
@@ -25,7 +25,7 @@
         background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 50%);
         position: relative;
 
-        @media screen and (max-width:1440px) {
+        @media screen and (max-width:767px) {
             width: 335px;
             height: 225px;
         }
@@ -37,7 +37,7 @@
             opacity: 80%;
             object-fit: cover;
 
-            @media screen and (max-width:1440px) {
+            @media screen and (max-width:767px) {
                 width: 335px;
                 height: 225px;
             }
@@ -52,7 +52,7 @@
             padding-right: 20px;
             color: var.$White;
 
-            @media screen and (max-width:1440px) {
+            @media screen and (max-width:767px) {
                 font-size: 18px;
                 top: 170px;
                 width: 295px;

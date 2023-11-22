@@ -1,0 +1,38 @@
+@use '../../styles/variables' as var;
+
+.a-propos-container {
+    width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 767px) {
+        width: 335px;
+    }
+
+    .a-propos-title-container {
+        background: black;
+        border-radius: 25px;
+        height: 223px;
+
+        @media screen and (max-width: 767px) {
+            width: 335px;
+        }
+
+        img {
+            height: 223px;
+            width: 1240px;
+            object-fit: cover;
+            opacity: 70%;
+            border-radius: 25px;
+
+            @media screen and (max-width: 767px) {
+                width: 335px;
+            }
+        }
+    }
+
+}
