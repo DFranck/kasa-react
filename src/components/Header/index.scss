@@ -27,14 +27,25 @@
             gap: 26px;
         }
 
-        a {
-            color: var.$MainColor;
-            font-weight: 500;
-            font-size: 24px;
-
-            @media screen and (max-width:767px) {
-                font-size: 12px;
+        li {
+            &.active {
+                text-decoration: underline;
+                color: var.$MainColor
             }
+
+            a {
+                color: var.$MainColor;
+                font-weight: 500;
+                font-size: 24px;
+
+
+                @media screen and (max-width:767px) {
+                    font-size: 12px;
+                }
+
+            }
+
         }
+
     }
 }

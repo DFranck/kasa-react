@@ -5,10 +5,12 @@ import nextVector from "../../assets/images/Next Vector.png";
 function Carrousel({ pictures }) {
   const [index, setIndex] = useState(0);
   const goToPrevious = () => {
-    setIndex(index >= 1 ? index - 1 : pictures.length);
+    setIndex(index > 0 ? index - 1 : pictures.length - 1);
+    console.log(index);
   };
   const goToNext = () => {
     setIndex(index < pictures.length - 1 ? index + 1 : 0);
+    console.log(index);
   };
   return (
     <div className="carrousel">
