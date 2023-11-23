@@ -1,0 +1,113 @@
+@use '../../styles/variables' as var;
+
+.logement-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    color: var.$MainColor;
+
+    @media screen and (max-width:767px) {
+        max-width: 335px;
+    }
+
+    .infos-container {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width:767px) {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .left-container {
+            h1 {
+                font-size: 36px;
+                line-height: 51px;
+                font-weight: 500;
+
+                @media screen and (max-width:767px) {
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 25px;
+                font-weight: 500;
+
+                @media screen and (max-width:767px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .right-container {
+            @media screen and (max-width:767px) {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 15px;
+            }
+
+            .host-container {
+                display: flex;
+                text-align: right;
+                gap: 10px;
+
+                .host-name {
+
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 500;
+
+                        @media screen and (max-width:767px) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50px;
+
+                    @media screen and (max-width:767px) {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+    .logement-dropdown-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 0;
+
+        @media screen and (max-width:767px) {
+            display: block;
+            margin: 15px 0;
+        }
+
+        .dropdown-container {
+
+            &.small {
+                display: none;
+
+                @media screen and (max-width:767px) {
+                    display: block;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &.medium {
+                @media screen and (max-width:767px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

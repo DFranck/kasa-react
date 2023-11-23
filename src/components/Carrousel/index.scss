@@ -1,0 +1,61 @@
+@use '../../styles/variables' as var;
+
+.carrousel {
+    position: relative;
+    height: 415px;
+    width: 1240px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 787px) {
+        width: 335px;
+        height: 225px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    p {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        color: var.$White;
+        font-size: 18px;
+        font-weight: 500;
+        transform: translateX(-50%);
+
+        @media screen and (max-width:767px) {
+            display: none;
+        }
+    }
+
+    button {
+        height: 100%;
+        width: 10%;
+        position: absolute;
+        background: none;
+        border: none;
+
+        &.previous-btn {
+            left: 0;
+        }
+
+        &.next-btn {
+            right: 0;
+        }
+
+        .vector {
+            width: 46px;
+            height: 80px;
+            opacity: 70%;
+
+            @media screen and (max-width:767px) {
+                width: 11.5px;
+                height: 20px;
+            }
+        }
+    }
+}

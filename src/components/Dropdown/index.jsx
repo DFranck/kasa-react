@@ -3,26 +3,19 @@ import "./index.scss";
 import upVector from "../../assets/images/Up Vector.png";
 import downVector from "../../assets/images/Down Vector.png";
 
-function Dropdown({ title, description, equipments, size }) {
+function Dropdown({ title, description, equipments, size, content, id }) {
   const [isDropdownOpen, setDropdown] = useState(false);
   const [dropdownContent, setDropdownContent] = useState();
   const [vector, setVector] = useState(upVector);
   useEffect(() => {
     if (title === "description") {
-      setDropdownContent(
-        "Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement."
-      );
+      const descriptionContent = content;
+      setDropdownContent(descriptionContent);
     } else if (title === "equipments") {
-      const content = [
-        "Équipements de base",
-        "Micro-Ondes",
-        "Douche italienne",
-        "Frigo",
-        "WIFI",
-      ];
+      const contentList = content;
       setDropdownContent(
-        content.map((item) => {
-          return <li>{item}</li>;
+        contentList.map((item) => {
+          return <li key={id + item}>{item}</li>;
         })
       );
     } else {
@@ -30,7 +23,7 @@ function Dropdown({ title, description, equipments, size }) {
         `IL N'Y A PAS DE CONTENU POUR CETTE PARTIE ALORS JE MEUBLE POUR CODER`
       );
     }
-  }, [title, description, equipments]);
+  }, [title, description, equipments, content, id]);
   const toogleDropdown = () => {
     const content = document.querySelector(`.${title}-content.${size}`);
     if (isDropdownOpen) {

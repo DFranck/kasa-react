@@ -1,7 +1,6 @@
 @use '../../styles/variables' as var;
 
 .dropdown-container {
-    background: var.$Lightgrey;
     color: var.$MainColor;
 
 
@@ -69,6 +68,7 @@
 
     .show-content {
         display: block;
+        background: var.$Lightgrey;
 
         &.small {
             font-size: 12px;
