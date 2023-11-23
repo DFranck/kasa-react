@@ -9,50 +9,6 @@
         max-width: 335px;
     }
 
-    .home-title-container {
-        background: black;
-        width: 1240px;
-        height: 223px;
-        border-radius: 25px;
-        position: relative;
 
-        @media screen and (max-width: 767px) {
-            max-width: 335px;
-            height: 111px;
-            border-radius: 10px;
-        }
-
-        img {
-            opacity: 70%;
-            width: 1240px;
-            height: 223px;
-            object-fit: cover;
-            border-radius: 25px;
-
-            @media screen and (max-width: 767px) {
-                max-width: 335px;
-                height: 111px;
-                border-radius: 10px;
-            }
-        }
-
-        h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: var.$White;
-            font-weight: 500;
-            font-size: 48px;
-            width: 705px;
-
-            @media screen and (max-width: 767px) {
-                font-size: 23px;
-                left: 16px;
-                transform: translateY(-50%);
-                width: 217px;
-            }
-        }
-    }
 
 }

@@ -1,12 +1,11 @@
 import Dropdown from "../../components/Dropdown";
-import titleImg from "../../assets/images/Image source 2.png";
+import titlePicture from "../../assets/images/Image source 2.png";
 import "./index.scss";
+import Banner from "../../components/Banner";
 function Apropos() {
   return (
     <div className="a-propos-container">
-      <div className="a-propos-title-container">
-        <img src={titleImg} alt="title background pictur" />
-      </div>
+      <Banner titlePicture={titlePicture} title={""} />
       <Dropdown title={"Fiabilité"} size="large" />
       <Dropdown title={"Respect"} size="large" />
       <Dropdown title={"Service"} size="large" />

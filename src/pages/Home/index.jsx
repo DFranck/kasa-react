@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import Cards from "../../components/Cards";
 import "./index.scss";
+
 import titlePicture from "../../assets/images/Image source 1.png";
+
+import Banner from "../../components/Banner";
 
 function Home() {
   const [data, setData] = useState([]);
@@ -21,10 +24,10 @@ function Home() {
 
   return (
     <div className="home-container">
-      <div className="home-title-container">
-        <img src={titlePicture} alt="title background pictur" />
-        <h1>Chez vous, partout et ailleurs</h1>
-      </div>
+      <Banner
+        titlePicture={titlePicture}
+        title="Chez vous, partout et ailleurs"
+      />
       <Cards data={data} />
     </div>
   );
