@@ -1,13 +1,24 @@
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import Dropdown from "../../components/Dropdown";
 import "./index.scss";
 import Carrousel from "../../components/Carrousel";
 import Tags from "../../components/Tags";
 import Note from "../../components/Note";
+import { useEffect } from "react";
 
 function Logement() {
   let { id } = useParams();
   const location = useLocation();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!location.state) {
+      console.log("path non reconnu");
+      navigate("/404");
+    }
+  }, [location.state, navigate]);
+  if (!location.state) {
+    return null;
+  }
   const card = location.state.card;
   const name = card.host.name.split(" ").pop();
   const surName = card.host.name.split(" ").shift();
