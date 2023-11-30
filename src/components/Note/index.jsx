@@ -27,7 +27,6 @@ function Note({ note, id }) {
       />
     );
   }
-  console.log(stars);
   return (
     <div>
       <div className="desktop-note">{stars}</div>

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 function Cards({ data }) {
   let navigate = useNavigate();
-  console.log(data);
   const handleCard = (card) => {
     navigate(`/logement/${card.id}`, { state: { card } });
   };

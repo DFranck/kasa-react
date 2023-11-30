@@ -1,5 +1,7 @@
 .desktop-note {
     margin-top: 20px;
+    display: flex;
+    gap: 15px;
 
     @media screen and (max-width:767px) {
         display: none;
@@ -11,5 +13,7 @@
 
     @media screen and (max-width:767px) {
         display: block;
+        display: flex;
+        gap: 5px;
     }
 }

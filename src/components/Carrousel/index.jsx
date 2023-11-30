@@ -4,13 +4,17 @@ import previousVector from "../../assets/images/Previous Vector.png";
 import nextVector from "../../assets/images/Next Vector.png";
 function Carrousel({ pictures }) {
   const [index, setIndex] = useState(0);
+  if (pictures.length === 0) {
+    const hideTargets = document.querySelectorAll(
+      "previous-btn, index-number, next-btn "
+    );
+    hideTargets.classList.add("hide");
+  }
   const goToPrevious = () => {
     setIndex(index > 0 ? index - 1 : pictures.length - 1);
-    console.log(index);
   };
   const goToNext = () => {
     setIndex(index < pictures.length - 1 ? index + 1 : 0);
-    console.log(index);
   };
   return (
     <div className="carrousel">
@@ -23,7 +27,7 @@ function Carrousel({ pictures }) {
         />
       </button>
       <img src={pictures[index]} alt="" />
-      <p>{`${index + 1}/${pictures.length}`}</p>
+      <p className="index-number">{`${index + 1}/${pictures.length}`}</p>
       <button className="next-btn" onClick={() => goToNext()}>
         <img src={nextVector} alt="" className="vector" />
       </button>
