@@ -43,30 +43,8 @@ function Logement() {
         </div>
       </div>
       <div className="logement-dropdown-container">
-        <Dropdown
-          title="description"
-          size="medium"
-          content={card.description}
-          id={id}
-        />
-        <Dropdown
-          title="equipments"
-          size="medium"
-          content={card.equipments}
-          id={id}
-        />
-        <Dropdown
-          title="description"
-          size="small"
-          content={card.description}
-          id={id}
-        />
-        <Dropdown
-          title="equipments"
-          size="small"
-          content={card.equipments}
-          id={id}
-        />
+        <Dropdown title="Déscription" content={card.description} id={id} />
+        <Dropdown title="Équipments" content={card.equipments} id={id} />
       </div>
     </div>
   );

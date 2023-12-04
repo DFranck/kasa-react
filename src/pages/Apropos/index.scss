@@ -11,20 +11,41 @@
     gap: 30px;
     margin-bottom: 30px;
 
+    @media screen and (max-width: 426px) {
+        gap: 25px;
+    }
+
     .dropdown-container {
-        width: 1023px;
+        max-width: 1023px;
+        min-width: 335px;
+        width: 85vw;
 
         button {
             height: 52px;
             padding: 10px 15px;
             font-size: 24px;
             font-weight: 500;
+
+            @media screen and (max-width: 426px) {
+                height: 30px;
+                font-size: 13px;
+            }
+
+            img {
+                @media screen and (max-width: 426px) {
+                    width: 16px;
+                }
+            }
         }
 
         .show-content {
             padding: 10px 15px;
             font-size: 18px;
             font-weight: 400;
+
+            @media screen and (max-width: 426px) {
+                font-size: 12px;
+            }
         }
     }
 

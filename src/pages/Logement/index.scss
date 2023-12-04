@@ -2,12 +2,12 @@
 
 .logement-container {
     max-width: 1240px;
+    min-width: 335px;
+    width: 85vw;
     margin: 0 auto;
     color: var.$MainColor;
 
-    @media screen and (max-width:767px) {
-        max-width: 335px;
-    }
+
 
     .infos-container {
         margin-top: 30px;
@@ -15,8 +15,12 @@
         justify-content: space-between;
 
         @media screen and (max-width:767px) {
+            flex-direction: column;
+            margin: 10px auto 0;
+        }
+
+        @media screen and (max-width:767px) {
             display: block;
-            margin-top: 10px;
         }
 
         .left-container {
@@ -25,7 +29,7 @@
                 line-height: 51px;
                 font-weight: 500;
 
-                @media screen and (max-width:767px) {
+                @media screen and (max-width:426px) {
                     font-size: 18px;
                     line-height: 25px;
                 }
@@ -36,14 +40,21 @@
                 line-height: 25px;
                 font-weight: 500;
 
-                @media screen and (max-width:767px) {
+                @media screen and (max-width:426px) {
                     font-size: 14px;
                 }
             }
         }
 
         .right-container {
+
             @media screen and (max-width:767px) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            @media screen and (max-width:426px) {
                 display: flex;
                 flex-direction: row-reverse;
                 align-items: center;
@@ -64,7 +75,7 @@
                         font-size: 18px;
                         font-weight: 500;
 
-                        @media screen and (max-width:767px) {
+                        @media screen and (max-width:426px) {
                             font-size: 12px;
                         }
                     }
@@ -75,7 +86,7 @@
                     height: 64px;
                     border-radius: 50px;
 
-                    @media screen and (max-width:767px) {
+                    @media screen and (max-width:426px) {
                         width: 32px;
                         height: 32px;
                     }
@@ -89,27 +100,64 @@
         justify-content: space-between;
         margin: 50px 0;
 
-        @media screen and (max-width:767px) {
-            display: block;
-            margin: 15px 0;
+
+        @media screen and (max-width: 1023px) {
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 0;
         }
+
 
         .dropdown-container {
+            max-width: 582px;
+            min-width: 335px;
+            width: 40vw;
 
-            &.small {
-                display: none;
+            @media screen and (max-width: 1023px) {
+                max-width: 85vw;
+                width: auto;
 
-                @media screen and (max-width:767px) {
-                    display: block;
-                    margin-bottom: 20px;
+            }
+
+
+            button {
+                height: 52px;
+                font-size: 18px;
+                font-weight: 500;
+                padding: 10px 20px;
+
+                @media screen and (max-width: 1023px) {
+                    height: 40px;
+                    font-size: 16px;
+                }
+
+                @media screen and (max-width: 426px) {
+                    height: 30px;
+                    font-size: 13px;
+                }
+
+                img {
+                    @media screen and (max-width: 426px) {
+                        width: 16px;
+                    }
                 }
             }
 
-            &.medium {
-                @media screen and (max-width:767px) {
-                    display: none;
+            .show-content {
+                font-size: 18px;
+                font-weight: 400;
+                padding: 10px 20px;
+
+                @media screen and (max-width: 1023px) {
+                    font-size: 16px;
+                }
+
+                @media screen and (max-width: 426px) {
+                    font-size: 12px;
                 }
             }
         }
+
+
     }
 }

@@ -8,10 +8,10 @@ function Dropdown({ title, description, equipments, size, content, id }) {
   const [dropdownContent, setDropdownContent] = useState();
   const [vector, setVector] = useState(upVector);
   useEffect(() => {
-    if (title === "description") {
+    if (title === "Déscription") {
       const descriptionContent = content;
       setDropdownContent(descriptionContent);
-    } else if (title === "equipments") {
+    } else if (title === "Équipments") {
       const contentList = content;
       setDropdownContent(
         contentList.map((item) => {
