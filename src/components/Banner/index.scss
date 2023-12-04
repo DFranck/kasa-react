@@ -2,29 +2,39 @@
 
 .banner-container {
     background: black;
-    width: 1240px;
-    height: 223px;
+    width: 85vw;
+    min-width: 335px;
+    max-width: 1240px;
+    margin: 0 auto;
+    max-height: 223px;
     border-radius: 25px;
     position: relative;
 
-    @media screen and (max-width: 767px) {
+
+    @media screen and (max-width: 426px) {
         max-width: 335px;
         height: 111px;
         border-radius: 10px;
+
     }
 
     img {
         opacity: 70%;
-        width: 1240px;
+        width: 85vw;
+        min-width: 335px;
+        max-width: 1240px;
+        margin: 0 auto;
         height: 223px;
         object-fit: cover;
         border-radius: 25px;
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 426px) {
             max-width: 335px;
             height: 111px;
             border-radius: 10px;
+
         }
+
     }
 
     h1 {
@@ -35,9 +45,15 @@
         color: var.$White;
         font-weight: 500;
         font-size: 48px;
-        width: 705px;
+        width: 90%;
+        text-align: center;
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 1023px) {
+            font-size: 32px;
+        }
+
+        @media screen and (max-width: 426px) {
+            text-align: start;
             font-size: 23px;
             left: 16px;
             transform: translateY(-50%);

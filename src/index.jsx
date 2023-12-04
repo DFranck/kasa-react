@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import AppRouter from "./components/Router";
+import AppRouter from "./Router";
 import "./styles/index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

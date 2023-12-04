@@ -10,7 +10,7 @@ function Header() {
       <img src={logoDesktop} alt="kasa header logo" />
       <ul>
         <li className={location.pathname === "/" ? "active" : ""}>
-          <Link to={"/"}>Acceuil</Link>
+          <Link to={"/"}>Accueil</Link>
         </li>
         <li className={location.pathname === "/Apropos" ? "active" : ""}>
           <Link to={"/Apropos"}>A Propos</Link>

@@ -10,10 +10,6 @@ function Apropos() {
       <Dropdown title={"Respect"} size="large" />
       <Dropdown title={"Service"} size="large" />
       <Dropdown title={"Sécurité"} size="large" />
-      <Dropdown title={"Fiabilité"} size="small" />
-      <Dropdown title={"Respect"} size="small" />
-      <Dropdown title={"Service"} size="small" />
-      <Dropdown title={"Sécurité"} size="small" />
     </div>
   );
 }

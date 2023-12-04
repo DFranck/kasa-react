@@ -2,13 +2,8 @@
 
 .home-container {
     max-width: 1240px;
+    min-width: 335px;
+    width: 85vw;
     margin: 0 auto;
-    position: relative;
-
-    @media screen and (max-width: 767px) {
-        max-width: 335px;
-    }
-
-
 
 }
