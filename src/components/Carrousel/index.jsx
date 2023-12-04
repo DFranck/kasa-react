@@ -17,11 +17,11 @@ function Carrousel({ pictures }) {
     setIndex(index < pictures.length - 1 ? index + 1 : 0);
   };
   return (
-    <div className="carrousel">
+    <section className="carrousel">
       {pictures.length === 1 ? (
         <img src={pictures[index]} alt={pictures[index]} />
       ) : (
-        <div>
+        <>
           <button className="previous-btn" onClick={() => goToPrevious()}>
             <img
               src={previousVector}
@@ -35,9 +35,9 @@ function Carrousel({ pictures }) {
           <button className="next-btn" onClick={() => goToNext()}>
             <img src={nextVector} alt="" className="vector" />
           </button>
-        </div>
+        </>
       )}
-    </div>
+    </section>
   );
 }
 
