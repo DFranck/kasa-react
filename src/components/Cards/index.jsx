@@ -15,7 +15,9 @@ function Cards({ data }) {
               src={card.pictures[0]}
               alt={"image de l'annonce de: " + card.title}
             />
-            <h2 className="card-title">{card.title}</h2>
+            <span className="card-title">
+              <h2>{card.title}</h2>
+            </span>
           </li>
         );
       })}
