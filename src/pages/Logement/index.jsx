@@ -23,30 +23,30 @@ function Logement() {
   const name = card.host.name.split(" ").pop();
   const surName = card.host.name.split(" ").shift();
   return (
-    <div className="logement-container">
+    <main className="logement-container">
       <Carrousel pictures={card.pictures} />
-      <div className="infos-container">
-        <div className="left-container">
+      <section className="infos-container">
+        <section className="left-container">
           <h1>{card.title}</h1>
           <p>{card.location}</p>
           <Tags tags={card.tags} id={card.id} />
-        </div>
-        <div className="right-container">
-          <div className="host-container">
-            <div className="host-name">
+        </section>
+        <section className="right-container">
+          <figure className="host-container">
+            <figcaption className="host-name">
               <h2>{surName}</h2>
               <h2>{name}</h2>
-            </div>
+            </figcaption>
             <img src={card.host.picture} alt="" />
-          </div>
+          </figure>
           <Note note={card.rating} id={card.id} />
-        </div>
-      </div>
-      <div className="logement-dropdown-container">
+        </section>
+      </section>
+      <section className="logement-dropdown-container">
         <Dropdown title="Déscription" content={card.description} id={id} />
         <Dropdown title="Équipments" content={card.equipments} id={id} />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
