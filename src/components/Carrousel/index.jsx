@@ -18,19 +18,25 @@ function Carrousel({ pictures }) {
   };
   return (
     <div className="carrousel">
-      <button className="previous-btn" onClick={() => goToPrevious()}>
-        <img
-          src={previousVector}
-          alt={`position numéro ${index + 1} dans le carrousel`}
-          loading="lazy"
-          className="vector"
-        />
-      </button>
-      <img src={pictures[index]} alt="" />
-      <p className="index-number">{`${index + 1}/${pictures.length}`}</p>
-      <button className="next-btn" onClick={() => goToNext()}>
-        <img src={nextVector} alt="" className="vector" />
-      </button>
+      {pictures.length === 1 ? (
+        <img src={pictures[index]} alt={pictures[index]} />
+      ) : (
+        <div>
+          <button className="previous-btn" onClick={() => goToPrevious()}>
+            <img
+              src={previousVector}
+              alt={`position numéro ${index + 1} dans le carrousel`}
+              loading="lazy"
+              className="vector"
+            />
+          </button>
+          <img src={pictures[index]} alt={pictures[index]} />
+          <p className="index-number">{`${index + 1}/${pictures.length}`}</p>
+          <button className="next-btn" onClick={() => goToNext()}>
+            <img src={nextVector} alt="" className="vector" />
+          </button>
+        </div>
+      )}
     </div>
   );
 }
