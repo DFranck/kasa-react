@@ -9,7 +9,7 @@
     margin: 120px 0;
 
     img {
-        @media screen and (max-width:767px) {
+        @media screen and (max-width:1023px) {
             width: 198px;
         }
     }
@@ -17,7 +17,7 @@
     p {
         font-size: 36px;
 
-        @media screen and (max-width:767px) {
+        @media screen and (max-width:1023px) {
             font-size: 18px;
             text-align: center;
             margin: 0 70px;
@@ -28,7 +28,7 @@
         font-size: 18px;
         text-decoration: underline;
 
-        @media screen and (max-width:767px) {
+        @media screen and (max-width:1023px) {
             font-size: 14px;
         }
     }

@@ -23,13 +23,13 @@ function Home() {
   }, []);
 
   return (
-    <div className="home-container">
+    <main className="home-container">
       <Banner
         titlePicture={titlePicture}
         title="Chez vous, partout et ailleurs"
       />
       <Cards data={data} />
-    </div>
+    </main>
   );
 }
 
