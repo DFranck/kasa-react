@@ -51,15 +51,21 @@ function Dropdown({ title, description, equipments, size, content, id }) {
     }
   };
   return (
-    <div className={`dropdown-container ${size}`}>
+    <section className={`dropdown-container ${size}`}>
       <button onClick={() => toogleDropdown()}>
         {title}
         <img src={vector} alt="vector arraw" />
       </button>
-      <div className={`${title}-content hide-content ${size}`}>
-        {dropdownContent}
-      </div>
-    </div>
+      {title === "Équipments" ? (
+        <ul className={`${title}-content hide-content ${size}`}>
+          {dropdownContent}
+        </ul>
+      ) : (
+        <p className={`${title}-content hide-content ${size}`}>
+          {dropdownContent}
+        </p>
+      )}
+    </section>
   );
 }
 
